@@ -9,3 +9,7 @@ Vancouver is one of the largest and most populous cities in Canada, known for be
 When investing in a property, an overall market analysis will provide a good idea of the trends, but more is needed. It is imperative to buy property in the right neighbourhood because even if the overall market is excellent, a wrong location may lead to decreased property value in the future.
 
 A Neighbourhood Analysis will reveal the investment potential of various neighbourhoods based on their characteristics and intrinsic values.
+
+### Target Audience
+
+This analysis aims to provide more detailed insight for both companies(real estate firms) & individuals who are interested in investing in residential property in Vancouver. In addition, this analysis will provide a comprehensive understanding of the most suitable neighbourhood according to one's needs.
