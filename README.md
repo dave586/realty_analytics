@@ -1,6 +1,6 @@
 # Real-Estate Analysis of Vancouver Neighbourhoods
 
-##Introduction
+## Introduction
 
 In terms of realty analytics, it often involves understanding the basic concepts surrounding the ability of a property's value and obtainable revenue. This, in turn, provides the reason for investment and lots of planning and decision-making for it to succeed. A neighbourhood/community-wise Analysis of Residential Real Estate would provide a better understanding in determining which neighbourhood would offer a good return on investment, which is the goal of this project.
 
