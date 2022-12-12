@@ -13,3 +13,32 @@ A Neighbourhood Analysis will reveal the investment potential of various neighbo
 ### Target Audience
 
 This analysis aims to provide more detailed insight for both companies(real estate firms) & individuals who are interested in investing in residential property in Vancouver. In addition, this analysis will provide a comprehensive understanding of the most suitable neighbourhood according to one's needs.
+
+
+### Part 1: Crime statistics
+
+In terms of value and investment return, a desirable real estate property would exhibit certain features related to pricing, ease of transportation, distance to amenities, and a relatively low crime rate in the neighbourhood. In this section, I’ll demonstrate how Data Science can use pattern detection to identify appealing locations for investment in the metro Vancouver area. The data used in this section was gathered from Vancouver Open Data Catalogue. The data ranges from the year 2003 up to 2017. In addition, I have added serval modifications to the data to illustrate location information better. 
+
+let us start with importing the necessary packages
+```
+import pandas as pd  
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import math
+import geopandas
+import geopy
+from geopy.geocoders import Nominatim
+import folium
+from geopy.extra.rate_limiter import RateLimiter
+from folium import plugins
+from folium.plugins import MarkerCluster
+from pyproj import Proj
+```
+
+The by looking at the raw data we can see that it contains serval feature sets regarding a single incident. 
+```
+df = pd.read_csv('crime_records.csv')
+df.head(5)
+```
+![alt text](Capture0.png)
