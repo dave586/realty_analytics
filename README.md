@@ -41,4 +41,4 @@ The by looking at the raw data we can see that it contains serval feature sets r
 df = pd.read_csv('crime_records.csv')
 df.head(5)
 ```
-![Image](Capture0.png)
+![Image](Capture0.PNG)
