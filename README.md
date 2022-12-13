@@ -120,3 +120,18 @@ df2.head(3)
 Then we can plot the center points via folium
 ![kmeancent](Capture5.PNG)
 
+
+### Part 2: Property analytics
+
+We have selected the necessary neighbourhoods that can provide a good investment return. As for this part, we will look into the different properties within these neighbourhoods and their value from factors such as: financial backgrounds, amenities, accessibilities, transportation, cost, etc. 
+
+
+
+
+
+
+
+
+
+
+
