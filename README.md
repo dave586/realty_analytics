@@ -96,7 +96,10 @@ Central Business District    137513
 ```
 
 If we transpose these statistics onto the different communities, we can see the top five neighbourhoods with the lowest crime rate are: Musqueam, Stanley Park, South Cambie, Shaughnessy, and West Point Grey. Inversely, the five where crime occurs most often are: Grandview-Woodland, Mount Pleasant, Fairview, West End, and Central Business District. 
- 
- 
+
+Suppose we transfer the data point into a geospatial representation. Then, we can see the different crime locations and generate a heat map of the locations that are more prone to incidents. For this task, I have utilized the folium library, a powerful python library which can produce an interactive and concise leaflet map. 
+
+![heatmap](Capture4.PNG)
+
 
 
