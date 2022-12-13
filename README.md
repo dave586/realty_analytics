@@ -117,6 +117,6 @@ centers = kmeans.cluster_centers_ # Coordinates of cluster centers.
 labels = kmeans.predict(df_kmeans) # Labels of each point
 df2.head(3)
 ```
-
+Then we can plot the center points via folium
 ![kmeancent](Capture5.PNG)
 
