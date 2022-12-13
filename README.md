@@ -36,9 +36,67 @@ from folium.plugins import MarkerCluster
 from pyproj import Proj
 ```
 
-The by looking at the raw data we can see that it contains serval feature sets regarding a single incident. 
+Then by looking at the raw data we can see that it contains serval feature sets regarding a single incident. 
 ```
 df = pd.read_csv('crime_records.csv')
 df.head(5)
 ```
 ![Image](Capture0.PNG)
+
+We can take a closer look into the type of crime that occurred and the distribution in the overall data set. 
+```
+ df.groupby("TYPE")["TYPE"].count().sort_values()
+ 
+ TYPE
+Homicide                                                     252
+Vehicle Collision or Pedestrian Struck (with Fatality)       290
+Vehicle Collision or Pedestrian Struck (with Injury)       25294
+Theft of Bicycle                                           31112
+Break and Enter Commercial                                 38916
+Theft of Vehicle                                           41528
+Offence Against a Person                                   62078
+Other Theft                                                64611
+Break and Enter Residential/Other                          66378
+Mischief                                                   83970
+Theft from Vehicle                                        209609
+Name: TYPE, dtype: int64
+```
+
+As you can see, the top three often occurred are: "Theft from Vehicle" at 33%, "Mischief" at 13%, and lastly, "Break and Enter Residential/Other" at 11%. 
+we can then dig a little deeper into the neighbourhood themselves. 
+
+```
+df.groupby("NEIGHBOURHOOD")["NEIGHBOURHOOD"].count().sort_values()
+
+NEIGHBOURHOOD
+Musqueam                        571
+Stanley Park                   4174
+South Cambie                   6043
+Shaughnessy                    6321
+West Point Grey                6761
+Arbutus Ridge                  6819
+Kerrisdale                     8470
+Dunbar-Southlands              8792
+Oakridge                       9281
+Killarney                     11847
+Victoria-Fraserview           12310
+Riley Park                    14663
+Marpole                       15137
+Sunset                        19686
+Hastings-Sunrise              21272
+Strathcona                    25809
+Kensington-Cedar Cottage      28418
+Kitsilano                     30670
+Renfrew-Collingwood           31097
+Grandview-Woodland            31599
+Mount Pleasant                36378
+Fairview                      36723
+West End                      48722
+Central Business District    137513
+```
+
+If we transpose these statistics onto the different communities, we can see the top five neighbourhoods with the lowest crime rate are: Musqueam, Stanley Park, South Cambie, Shaughnessy, and West Point Grey. Inversely, the five where crime occurs most often are: Grandview-Woodland, Mount Pleasant, Fairview, West End, and Central Business District. 
+ 
+ 
+
+
