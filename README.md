@@ -118,4 +118,5 @@ labels = kmeans.predict(df_kmeans) # Labels of each point
 df2.head(3)
 ```
 
+![kmeancent](Capture5.PNG)
 
