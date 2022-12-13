@@ -98,8 +98,24 @@ Central Business District    137513
 If we transpose these statistics onto the different communities, we can see the top five neighbourhoods with the lowest crime rate are: Musqueam, Stanley Park, South Cambie, Shaughnessy, and West Point Grey. Inversely, the five where crime occurs most often are: Grandview-Woodland, Mount Pleasant, Fairview, West End, and Central Business District. 
 
 Suppose we transfer the data point into a geospatial representation. Then, we can see the different crime locations and generate a heat map of the locations that are more prone to incidents. For this task, I have utilized the folium library, a powerful python library which can produce an interactive and concise leaflet map. 
+```
+dfmatrix = test2[['Latitude', 'Longitude']].values# plot heatmap
+mh.add_child(plugins.HeatMap(dfmatrix, radius=14))
+mh
+```
 
 ![heatmap](Capture4.PNG)
 
+A refined filter was applied here, as we are only interested in the locations where a crime related to property occurs. In addition, it must be a more recent incident to reduce the overall noise in the data. Where the timeframe was set after 2012, and it was sampled at 50%. 
+
+We can also go a bit further with our data analysis via clustering; we can divide the processed data into groups using an unsupervised clustering algorithm like k-means. Although I have set the value of K at five by "guesstimate" while we can calculate a value of k using something like the elbow method, this was not the project's main aim. In terms of precision and accuracy, the important point is there is no correct value for K. If we choose a somewhat lower K value, we would not be able to see certain details. Yet, if the value is too high, then the clusters will overlap, and nothing informative will come out.
+```
+kmeans = KMeans(n_clusters = 5, init ='k-means++')
+kmeans.fit(df_kmeans)
+df2['cluster_label'] = kmeans.fit_predict(df_kmeans)
+centers = kmeans.cluster_centers_ # Coordinates of cluster centers.
+labels = kmeans.predict(df_kmeans) # Labels of each point
+df2.head(3)
+```
 
 
